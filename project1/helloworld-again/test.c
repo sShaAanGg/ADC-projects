@@ -7,7 +7,7 @@ int main()
 {
     char null = '\000';
     char s[32];
-    char str[] = "helloworld\0helloworld";
+    char str[] = "helloworld\0";
 
     scanf("%s", s);
     printf("%lu\n%s\n", strlen(s), s);

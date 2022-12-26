@@ -6,7 +6,7 @@
     - Hint: format string, ROP
 - [x] cyberpsychosis
     - Hint: GOT
-- [] modohayaku
+- [ ] modohayaku
     - Hint: shellcode
 - [ ] Test_Subject_087
     - Hint: ROP

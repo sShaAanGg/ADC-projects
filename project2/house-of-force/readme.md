@@ -1,5 +1,5 @@
 # Exploitation of HITCON-Training-Lab11
-[Detail is here](https://hackmd.io/bBNLej3XSw6_GhYydjs6bg?view#Linux-Heap-Exploitation)
+[Detail is at here](https://hackmd.io/DSfzC8arSGygYD_yfk5Oog?view#House-of-Force-top-chunk-related)
 ## Souce code 分析
 1. `magic()` 裡面會印出 "/home/bamboobox/flag" 的內容，因此要先建立 "/home/bamboobox/flag"  
     ![flag img](./flag.jpg)

@@ -26,4 +26,5 @@ The behavior of the system("echo '" . $_POST['json'] . "'| jq .bocchi"); command
 - {'bocchi': '`ls`'} -> syntax error
 - %7B%22bocchi%22: %22ls%22%7D
 - `ls` -> parse error
+- '{"bocchi": ""`ls`"}' -> parse error
 ...

